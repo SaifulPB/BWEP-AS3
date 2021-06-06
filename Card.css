@@ -1,0 +1,993 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  /* Body content to darken he color sigh */
+  background-color:#121212;
+}
+
+nav{
+  /* adjust the texts/links on nav bar */
+  display: flex;
+  /* justify the texts on nav bar */
+  justify-content: space-around;
+  /* align all texts/links in nav to center */
+  align-items: center;
+  /* adjustment of nav bar height */
+  min-height: 8vh;
+  /* nav bar color to purple(?) */
+  background-color: #4f4794;
+  /* font used by the nav bar */
+  font-family: 'Oswald', sans-serif;
+}
+
+nav ul li{
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+nav ul li:hover{
+  border-bottom: : solid 1px transparent;
+  background-color: #36393E;
+}
+
+footer.footer{
+  position: fixed;
+  height: 35px;
+  width: 100%;
+  background-color: #4f4794;
+  bottom: 0;
+}
+
+.buttonecard{
+  margin-left: 35%;
+  margin-top: 10%;
+}
+
+.logo{
+  border-style: none;
+  /* text color */
+  color: white;
+  /* Make all logo texts uppercase */
+  text-transform: : uppercase;
+  /* adjust each letter text from each other */
+  letter-spacing: 6px;
+  /* Text font size */
+  font-size: 15px;
+}
+
+.logo a{
+  /* color to hide/mask hyperlink */
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links{
+  /* adjust the links/texts in row*/
+  display: flex;
+  /* links color */
+  background-color: #4f4794;
+  justify-content: space-around;
+  /* adjust width in percent for flexibility */
+  width: 75%;
+}
+
+.nav-links li{
+  /* hide/remove the bullet on link on nav bar */
+  list-style: none;
+}
+
+.nav-links a{
+  color: white;
+  text-decoration: none;
+  letter-spacing: 5px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+p.copyright{
+  positon: absolute;
+  line-height: 35px;
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  bottom: 0;
+}
+/* hamburger button for smaller devices */
+.hamburgerbutton{
+  /* to hide hamburger button when on normal display */
+  display: none;
+  /* change mouse to hand pointer when hover over the button */
+  cursor: pointer;
+}
+
+.hamburgerbutton div{
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* responsive web design for small devices */
+@media screen and(max-width: 1024px){
+  .nav-links{
+    width: 60%;
+  }
+}
+
+/* responsive web design for small devices */
+@media screen and (max-width: 768px) {
+  body{
+    /* hide the content that exceed the max width above */
+    overflow-x: : hidden;
+  }
+  .nav-links{
+    /* moves the links inside hamburger */
+    position: fixed;
+    right: 0px;
+    height: 100%;
+    top: 0vh;
+    background-color: #4f4794;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    z-index: 1;
+  }
+
+  .nav-links li{
+    text-align: center;
+    opacity: 0;
+  }
+
+  .hamburgerbutton{
+    /* to make hamburger button visible on responsive mode */
+    display: block;
+    z-index: 2;
+  }
+}
+
+.nav-active{
+  transform: translateX(0%);
+  }
+
+@keyframes navLinkFade {
+    from{
+      opacity: 0;
+      transform: translateX(50px);
+  }
+    to{
+      opacity: 1;
+      transform: translateX(0px);
+  }
+}
+
+.button .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.button .line2{
+opacity: 0;
+}
+
+.button .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.pics{
+  border-bottom: 5px solid black;
+  border-top: 5px solid black;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  /* padding: 10px; */
+  margin: 10px;
+  border: 1px solid grey;
+  border-bottom: 5px solid black;
+  border-top: 5px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+textarea{
+  width: 250px;
+  height: 100px;
+  display: flex;
+}
+
+p.copyright{
+  positon: absolute;
+  line-height: 35px;
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  bottom: 0;
+}
+
+#util:hover{
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+#utilbox{
+  justify-content: flex-end;
+  display: block;
+  position: relative;
+  top: -80px;
+  /* left: 500px; */
+  width: 200px;
+  height:80px;
+  float: right;
+  margin-right: 0px;
+  background: green;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.text{
+  position: relative;
+  top: 0px;
+  right: 8px;
+  background: white;
+  width: 300px;
+  height: 20px;
+  border: 2px solid black;
+  border-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.text:hover{
+  background-color: grey;
+}
+
+#backgroundtype{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0px;
+  right: 8px;
+  border: 2px solid black;
+  border-bottom: 0;
+  width: 300px;
+  height: 40px;
+  background-color: white;
+}
+
+.noresponse:hover{
+  background-color: white!important;
+}
+
+#option1{
+  display: none;
+}
+
+.items{
+  display: inline-block;
+  position: relative;
+  left: 20px;
+  margin-top: 15px;
+  margin-right: 30px;
+  list-style-type: none;
+  border: 2px solid black;
+  background-color: white;
+}
+
+#itembox{
+  position: relative;
+  top: 0px;
+  right: 8px;
+  background: white;
+  width: 300px;
+  height: 120px;
+  border: 2px solid black;
+  border-bottom: 0;
+}
+
+#createsize{
+  position: relative;
+  background: white;
+  border: 2px solid black;
+  border-spacing: inherit;
+  border-right: none;
+}
+
+#layoutbox{
+  position: relative;
+  top: 0px;
+  right: 8px;
+  background: white;
+  width: 300px;
+  height: 100px;
+  border: 2px solid black;
+  border-bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#layout{
+  display: inline-block;
+  margin-top: 10px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.cards{
+  position: relative;
+  top: 0px;
+  right: 8px;
+  background: white;
+  width: 300px;
+  height: 440px;
+  border: 2px solid black;
+  border-bottom: 0;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  list-style-type: none;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* make scrollbar invisible */
+}
+
+#favourite1{
+  position: absolute;
+  width: 30px;
+  margin-top: -45px;
+  margin-left: 93%;
+  /* border: 1px solid red; */
+}
+
+#favourite1:hover{
+  background-image: url("Media/Icons/favourite.png")!important;
+  background-size: 30px!important;
+}
+
+#favourite2{
+  position: absolute;
+  width: 30px;
+  margin-top: -45px;
+  margin-left: 93%;
+  /* border: 1px solid red; */
+}
+
+#favourite2:hover{
+  background-image: url("Media/Icons/favourite.png")!important;
+  background-size: 30px!important;
+}
+
+#favourite3{
+  position: absolute;
+  width: 30px;
+  margin-top: -45px;
+  margin-left: 93%;
+  /* border: 1px solid red; */
+}
+
+#favourite3:hover{
+  background-image: url("Media/Icons/favourite.png")!important;
+  background-size: 30px!important;
+}
+
+#favourite4{
+  position: absolute;
+  width: 30px;
+  margin-top: -45px;
+  margin-left: 93%;
+  /* border: 1px solid red; */
+}
+
+#favourite4:hover{
+  background-image: url("Media/Icons/favourite.png")!important;
+  background-size: 30px!important;
+}
+
+#favourite5{
+  position: absolute;
+  width: 30px;
+  margin-top: -45px;
+  margin-left: 93%;
+  /* border: 1px solid red; */
+}
+
+#favourite5:hover{
+  background-image: url("Media/Icons/favourite.png")!important;
+  background-size: 30px!important;
+}
+
+#favourite6{
+  position: absolute;
+  width: 30px;
+  margin-top: -45px;
+  margin-left: 93%;
+  /* border: 1px solid red; */
+}
+
+#favourite6:hover{
+  background-image: url("Media/Icons/favourite.png")!important;
+  background-size: 30px!important;
+}
+
+#favourite7{
+  position: absolute;
+  width: 30px;
+  margin-top: -45px;
+  margin-left: 93%;
+  /* border: 1px solid red; */
+}
+
+#favourite7:hover{
+  background-image: url("Media/Icons/favourite.png")!important;
+  background-size: 30px!important;
+}
+
+#favourite8{
+  position: absolute;
+  width: 30px;
+  margin-top: -45px;
+  margin-left: 93%;
+  /* border: 1px solid red; */
+}
+
+#favourite8:hover{
+  background-image: url("Media/Icons/favourite.png")!important;
+  background-size: 30px!important;
+}
+
+#favourite9{
+  position: absolute;
+  width: 30px;
+  margin-top: -45px;
+  margin-left: 93%;
+  /* border: 1px solid red; */
+}
+
+#favourite9:hover{
+  background-image: url("Media/Icons/favourite.png")!important;
+  background-size: 30px!important;
+}
+
+#favourite10{
+  position: absolute;
+  width: 30px;
+  margin-top: -45px;
+  margin-left: 93%;
+  /* border: 1px solid red; */
+}
+
+#favourite10:hover{
+  background-image: url("Media/Icons/favourite.png")!important;
+  background-size: 30px!important;
+}
+
+#favourit11{
+  position: absolute;
+  width: 30px;
+  margin-top: -45px;
+  margin-left: 93%;
+  /* border: 1px solid red; */
+}
+
+#favourite11:hover{
+  background-image: url("Media/Icons/favourite.png")!important;
+  background-size: 30px!important;
+}
+
+#favourite12{
+  position: absolute;
+  width: 30px;
+  margin-top: -45px;
+  margin-left: 93%;
+  /* border: 1px solid red; */
+}
+
+#favourite12:hover{
+  background-image: url("Media/Icons/favourite.png")!important;
+  background-size: 30px!important;
+}
+
+#ecard{
+  display: block;
+  width: 300px;
+  height: 650px;
+  background: white;
+  border: 2px solid black;
+  position: relative;
+  float: right;
+  top: -580px;
+}
+
+.list{
+  display: flex;
+  list-style: none;
+  border: 1px solid black;
+  justify-content: space-around;
+}
+
+.save{
+  list-style-type: none;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+
+#box{
+  display: block;
+  position: absolute;
+  background-color: grey;
+  opacity: 0.07;
+  width: 600px;
+  height: 450px;
+  left: 27.5%;
+  top: 15%;
+  border: 1px dotted white;
+  border-width: thick;
+}
+
+#boxtext{
+  height: 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+/* ecards1 */
+.pic{
+  /* border: 1px solid red; */
+  width: 80px;
+  height: 70px;
+}
+
+#black{
+  display: none;
+  position: relative;
+  color: white;
+  font-size: 20px;
+  height: 74px;
+  margin-left: 59%;
+  margin-top: 5.8%;
+  /* border: 1px solid red; */
+}
+
+#title1{
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  list-style-type: none;
+  font-size: 25px;
+  font-family: arial;
+  font-style: normal;
+  font-style: italic;
+  font-weight: bold;
+  width: 100%;
+  height: 40px;
+  /* border: 1px solid red; */
+}
+
+#job1{
+  position: relative;
+  /* border: 1px solid red; */
+  font-size: 20px;
+  font-family: arial;
+  font-style: normal;
+  list-style-type: none;
+  font-style: oblique;
+  left: 5px;
+}
+
+#logo1{
+  /* border: 1px solid red; */
+  width: 320px;
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+
+#white{
+  display: none;
+  margin-top: 5px;
+  position: relative;
+  color: black;
+  font-size: 20px;
+  height: auto;
+  /* border: 1px solid red; */
+}
+
+#creds1{
+  margin-top: 80px;
+  margin-left: 52px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-style: normal;
+  list-style-type: none;
+  text-indent: 20px;
+  font-weight: bold;
+  /* border: 1px solid red; */
+}
+
+.dash{
+  color: white;
+}
+
+#input1{
+  display: none;
+}
+
+#button1{
+  display: none;
+}
+
+/* ecards2 */
+#logo2{
+  display: none;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 35px;
+  height: 100px;
+  /* border: 1px solid red; */
+}
+
+#others{
+  float: right;
+  top: 100px;
+  position: relative;
+  margin-top: 130px;
+  margin-right: 115px;
+  font-size: 25px;
+  font-family: Bodoni MT;
+  color: white;
+  list-style-type: none;
+  /* border: 1px solid red; */
+
+}
+
+#creds2{
+  display: none;
+}
+
+#address2{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 35%;
+  height: 20%;
+  margin-left: 40px;
+  top: 333px;
+  font-size: 25px;
+  font-family: Bodoni MT;
+  color: white;
+  list-style-type: none;
+  word-break: break-word;
+  /* border: 1px solid red; */
+}
+
+#name{
+  font-size: 65px;
+  font-family: Bodoni MT;
+  font-weight: bold;
+  color: white;
+  list-style-type: none;
+  /* border: 1px solid red; */
+}
+
+#initial{
+  margin-left: 30px;
+  display: none;
+  position: absolute;
+  top: 55px;
+  /* border: 1px solid red; */
+}
+
+#job2{
+  margin-top: -10px;
+  list-style-type: none;
+  font-size: 38px;
+  font-family: Bodoni MT;
+  font-style: italic;
+  color: white;
+}
+
+#input2{
+  display: none;
+}
+
+#button2{
+  display: none;
+}
+
+/* ecard3 */
+
+#back2{
+  display: inline-block;
+  width: 90.8%;
+  height: 92%;
+  margin-left: 4.5%;
+  margin-top: 3%;
+  /* border: 1px solid red; */
+}
+
+#dear{
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: Arial;
+  font-size: 35px;
+  /* border: 1px solid red; */
+}
+
+#p2{
+  margin-top: 45px;
+  margin-left: 70px;
+  margin-right: 70px;
+  text-align: center;
+  font-size: 22px;
+}
+
+#sincerely{
+  margin-top: 45px;
+  margin-left: 70px;
+  margin-right: 70px;
+  text-align: center;
+  font-size: 22px;
+}
+
+#sender{
+  text-align: center;
+  font-size: 22px;
+}
+
+#ecard3{
+  display: none;
+}
+
+#input3{
+  display: none;
+}
+
+#button3{
+  display: none;
+}
+/* ecard4 */
+
+#back3{
+  display: inline-block;
+  width: 87%;
+  height: 412px;;
+  margin-left: 6.5%;
+  margin-top: 3.2%;
+}
+
+#dear2{
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: Arial;
+  font-size: 35px;
+}
+
+#p3{
+  margin-top: 35px;
+  margin-left: 77px;
+  margin-right: 77px;
+  text-align: center;
+  font-size: 22px;
+}
+
+#sincerely2{
+  margin-top: 45px;
+  margin-left: 70px;
+  margin-right: 70px;
+  text-align: center;
+  font-size: 22px;
+}
+
+#sender2{
+  text-align: center;
+  font-size: 22px;
+}
+
+#ecard4{
+  display: none;
+}
+
+#input4{
+  display: none;
+}
+
+#button4{
+  display: none;
+}
+
+/* ecard5 */
+
+#ecard5{
+  display: none;
+}
+
+#title2{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: Edwardian Script ITC;
+  font-size: 75px;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  /* border: 1px solid red; */
+}
+
+.list2{
+  display: flex;
+  justify-content: center;
+  font-family: Forte;
+  font-size: 25px;
+  list-style-type: none;
+  /* border: 1px solid red; */
+}
+
+.info{
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: Forte;
+  font-size: 25px;
+  /* border: 1px solid red; */
+}
+
+.normal{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: Forte;
+  font-size: 25px;
+  /* border: 1px solid red; */
+}
+
+#input5{
+  display: none;
+}
+
+#button5{
+  display: none;
+}
+
+/* ecard6 */
+
+#ecard6{
+  display: none;
+}
+
+#back1{
+  display: inline-block;
+  width: 88.3%;
+  height: 92.4%;
+  margin-left: 5.7%;
+  margin-top: 4.9%;
+  /* border: 1px solid red; */
+}
+
+#groom{
+  display: flex;
+  justify-content: center;
+  margin-top: 110px;
+  font-family: Brush Script MT;
+  font-size: 50px;
+  /* border: 1px solid red; */
+}
+
+#bride{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  font-family: Brush Script MT;
+  font-size: 50px;
+  /* border: 1px solid red; */
+}
+
+#and{
+  display: flex;
+  justify-content: center;
+  font-family: Forte;
+  font-size: 20px;
+  /* border: 1px solid red; */
+}
+
+#p1{
+  margin-left: 55px;
+  margin-right: 55px;
+  word-break: break-word;
+  font-size: 25px;
+  text-align: center;
+  font-family: Antique Roman Solid AT;
+  /* border: 1px solid red; */
+}
+
+#input6{
+  display: none;
+}
+
+#button6{
+  display: none;
+}
+
+#confirm1{
+  display: none;
+}
+
+#confirm2{
+  display: none;
+}
+
+#confirm3{
+  display: none;
+}
+
+#confirm4{
+  display: none;
+}
+
+#confirm5{
+  display: none;
+}
+
+#confirm6{
+  display: none;
+}
+
+#save1{
+  display: none;
+}
+
+#save2{
+  display: none;
+}
+
+#save3{
+  display: none;
+}
+
+#save4{
+  display: none;
+}
+
+#save5{
+  display: none;
+}
+
+#save6{
+  display: none;
+}
+
+#load3{
+  display: none;
+}
+
+/* responsive web design for small devices */
+@media screen and (max-width: 600px) {
+  body{
+    /* hide horizontal scrollbar that exceed the max width above */
+    overflow-x: hidden;
+  }
