@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- to invoke responsive mode -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <!-- Add icon on the browser tab  -->
+    <link rel="icon" href="Media/Icons/Favicon1.png">
+    <!-- Linked CSS Files -->
+    <link rel="stylesheet" type="text/css" href="ecard.css" media="screen"/>
+    <!-- Page title name -->
+    <title>E-Card Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav>
+      <!-- Navigation bar logo -->
+      <div class = "logo" href="index.html">
+        <h4><a href="index.html">THE E-CARDBUILDER</a></h4>
+      </div>
+      <!-- Navigation bar links -->
+      <ul class="nav-links">
+        <!-- <li><a href="home.html"> Home </a></li> -->
+        <li><a href="e-card.html"> Create E-Card </a></li>
+        <li><a href="aboutus.html"> About Us </a></li>
+        <li><a href="support.html"> Support </a></li>
+      </ul>
+      <!-- Hamburger button for responsive web design -->
+      <div class = "hamburgerbutton">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <script src="app.js"></script>
+    <script src="ecard.js"></script>
+
+    <div class="text" id="createnew" onclick="create()">
+      <p onclick="create()">Create New<p>
+      </div>
+
+      <div id="option1">
+          <div class="text" id="noresponse">
+            <p>1. E-Card Size</p>
+          </div>
+          <div id="backgroundtype">
+            <span>Portrait&nbsp;</span><button onclick="portrait()">Press!</button>
+            <span>&nbsp;</span>
+            <span>Landscape&nbsp;</span><button onclick="landscape()">Press!</button>
+          </div>
+          <div class="text">
+            2. E-Card Layout
+          </div>
+          <div id="layoutbox">
+            <ul id="layout">
+              <li><span>Formal 1?&nbsp;</span><button onclick="formallayout1()">Press!</button>
+                  <span>Formal 2?&nbsp;</span><button onclick="formallayout2()">Press!</button></li>
+              <li><span>&nbsp;</span></li>
+              <li><span>Informal?&nbsp;</span><button onclick="informallayout()">Press!</button></li>
+            </ul>
+          </div>
+          <div class="text">
+            3. Salutations
+          </div>
+          <div id="itembox">
+          <ul>
+            <li class="items" draggable="true" ondrop="drop(event)" ondragover="allowDrop(event)"><span draggable="true" ondragstart="dragStart(event)">Mr</span></li>
+            <li class="items" draggable="true" ondrop="drop(event)" ondragstart="drag(event)"><span>Mrs</span></li>
+            <li class="items" draggable="true" ondrop="drop(event)" ondragstart="drag(event)"><span>Miss</span></li>
+            <li class="items" draggable="true" ondrop="drop(event)" ondragstart="drag(event)"><span>Sir</span></li>
+            <li class="items" draggable="true" ondrop="drop(event)" ondragstart="drag(event)"><span>Madam</span></li>
+          </ul>
+        </div>
+        <div class="text">
+          3. Greetings
+        </div>
+          <div id="itembox">
+          <ul>
+            <li class="items" draggable="true" ondrop="drop(event)" ondragstart="drag(event)"><span>Assalamualaikum and good morning</span></li>
+            <li class="items" draggable="true" ondrop="drop(event)" ondragstart="drag(event)"><span>Good morning</span></li>
+            <li class="items" draggable="true" ondrop="drop(event)" ondragstart="drag(event)"><span>Good Afternoon</span></li>
+            <li class="items" draggable="true" ondrop="drop(event)" ondragstart="drag(event)"><span>Good Evening</span></li>
+            <li class="items" draggable="true" ondrop="drop(event)" ondragstart="drag(event)"><span>Good Day</span></li>
+          </ul>
+        </div>
+      </div>
+
+    <div class="text"onclick="predefined()">
+      <p onclick="predefind()">Pre-defined E-Cards<p>
+      </div>
+
+      <div id="option2">
+    <div class="text" id="all" onclick="showall()">
+      <p onclick="showall()">All<p>
+    </div>
+    <div class="text" id="formal" onclick="corporate()">
+      <p onclick="corporate()">Corporate<p>
+    </div>
+    <div class="text" id="informal" onclick="informal()">
+      <p onclick="informal()">Informal<p>
+    </div>
+    <div class="text" id="corporate" onclick="formal()">
+      <p onclick="formal()">Formal<p>
+    </div>
+    <div class="text" id="favourite" onclick="favourite()">
+      <p onclick="favourite()">Favourites<p>
+    </div>
+
+    <div class="cards">
+      <ul>
+<!-- Williams. (2020, January 6). 89+ Business Card Templates - Pages, InDesign, PSD, Publisher. 89+ Business Card Templates - Pages, InDesign, PSD, Publisher | Free &amp; Premium Templates. https://www.template.net/business/business-cards/business-card-example/.  -->
+        <li id= "sketch1"><img class="pics" id= "sketch1" src="Media/E-Cards/sketch1.jpg" width="300px" height="200px" onclick="myBox1()">
+        <img id="favourite1" src="Media/Icons/star.png" onclick="favMe1()"></li>
+<!-- masaka.luxiarweddingphoto. (n.d.). Samples Of Complimentary Cards. Template - masaka.luxiarweddingphoto.com. https://masaka.luxiarweddingphoto.com/samples-of-complimentary-cards/.  -->
+        <li id= "sketch2"><img class="pics" id= "sketch2" src="Media/E-Cards/sketch2.jpg" width="300px" height="200px" onclick="myBox2()">
+        <img id="favourite2" src="Media/Icons/star.png" onclick="favMe2()"></li>
+        <li id= "sketch3"><img class="pics" id= "sketch3" src="Media/E-Cards/sketch3.jpg" width="300px" height="200px" onclick="myBox3()">
+        <img id="favourite3" src="Media/Icons/star.png" onclick="favMe3()"></li>
+        <li id= "sketch4"><img class="pics" id= "sketch4" src="Media/E-Cards/sketch4.jpg" width="300px" height="200px" onclick="myBox4()">
+        <img id="favourite4" src="Media/Icons/star.png" onclick="favMe4()"></li>
+<!-- Sterling, A. (n.d.). Dinner Invitation Template Free: Places To Visit: Birthday With Free Dinner In...: Party invite template, Dinner invitation template, Graduation invitation wording. Pinterest. https://www.pinterest.com/pin/621144973592559965/?d=t&amp;mt=login.  -->
+        <li id= "sketch5"><img class="pics" id= "sketch5" src="Media/E-Cards/sketch5.jpg" width="300px" height="450px" onclick="myBox5()">
+        <img id="favourite5" src="Media/Icons/star.png" onclick="favMe5()"></li>
+        <!-- invitationsbydawn. (n.d.). How to Word Your Invitation: Formally or Informally. Wedding invitations and stationery from Invitations by Dawn. https://www.invitationsbydawn.com/content/word-invitations-formally-or-informally/.  -->
+        <li id= "sketch6"><img class="pics" id= "sketch6" src="Media/E-Cards/sketch6.jpg" width="300px" height="450px" onclick="myBox6()">
+        <img id="favourite6" src="Media/Icons/star.png" onclick="favMe6()"></li>
+    </ul>
+  </div>
+</div>
+
+
+    <div id="box">
+
+      <span id="boxtext">Click the e-cards to show here!</span>
+
+      <!-- ecard1 -->
+      <div id ="black">
+  <ul>
+  <li id ="title1">Your Name</li>
+    <li id = "job1">Job Title</li>
+  </ul>
+  </div>
+  <div id="white">
+    <ul id="creds1">
+      <li id="phoneno1">Phone Number 1</li>
+      <li id="phoneno2">Phone Number 2</li>
+      <li class="dash">------</li>
+      <li id="email">Email</li>
+      <li id="url">Website URL</li>
+      <li class="dash">------</li>
+      <li id="address1">Address</li>
+      <li class="dash">------</li>
+    </ul>
+    <div id="logo1">
+    <img class="pic" src="Media/Icons/Your Logo.png">
+    </div>
+    </div>
+
+    <!-- ecard2 -->
+    <div id="logo2">
+      <img class="pic" src="Media/Icons/Your Logo.png">
+    </div>
+    <div id="initial">
+      <ul>
+        <li id="name">John Smith</li>
+        <li id="job2">Civil Engineer</li>
+      </ul>
+    </div>
+    <div id="creds2">
+      <ul id="address2">
+        <li>Address</li>
+      </ul>
+      <ul id="others">
+        <li id= "phoneno3">Phone Number</li>
+        <li id="email2">Email</li>
+        <li id="url2">Website URL</li>
+      </ul>
+    </div>
+
+    <!-- ecard3 -->
+    <div id="ecard3">
+      <div id="back2">
+  <div id="dear">
+    <span>Dear&nbsp;</span>
+    <span id="receiver" ondrop="drop(event)" ondragover="allowDrop(event)">Name</span>
+    <span>,</span>
+    </div>
+    <div id="p2">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempor eros vel orci dictum, sed pellentesque orci feugiat. In a luctus nisi. Ut et mauris suscipit, tincidunt dolor eget, tempus nibh. Pellentesque finibus mollis velit at rutrum.
+      </div>
+      <div id="sincerely">
+        Sincerely,
+        </div>
+        <div id="sender">
+          Name
+          </div>
+  </div>
+    </div>
+
+    <!-- ecard4 -->
+    <div id="ecard4">
+    <div id="back3">
+      <div id="dear">
+        <span>Dear&nbsp;</span>
+        <div ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <span id="receiver2" ondragstart="dragStart(event)">Name</span>
+      </div>
+        <span>,</span>
+        </div>
+    <div id="p3">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempor eros vel orci dictum, sed pellentesque orci feugiat. In a luctus nisi. Ut et mauris suscipit, tincidunt dolor eget, tempus nibh. Pellentesque finibus mollis velit at rutrum.
+      </div>
+      <div id="sincerely2">
+        Sincerely,
+        </div>
+        <div id="sender2">
+          Name
+          </div>
+        </div>
+      </div>
+
+    <!-- ecard5 -->
+    <div id=ecard5>
+    <div id="title2">
+      You're Invited
+    </div>
+    <div class="info">
+      <span>to a&nbsp;</span>
+      <span>formal&nbsp;</span>
+      <span id="event">dinner</span>
+    </div>
+    <div class="info">
+      <span>Hosted by:</span>
+    </div>
+    <div class="list2">
+      <span id="host">Host Name</span>
+    </div>
+    <div class="info">
+      <span id="date">December 12, 2020</span>
+    </div>
+    <div class="list2">
+      <span id="timestart">8:00 p.m. - a&nbsp</span>
+        <span id="timeend">11:00 p.m.</span>
+    </div>
+    <div class="info">
+      <span>at&nbsp;</span>
+      <span id="location">Location Name</span>
+    </div>
+    <div class="normal">
+      <span id="address3">Address</span>
+    </div>
+    <div class="normal">
+      <span id="country">Country</span>
+    </div>
+    <div class="info">
+      <span>RSVD to&nbsp;</span>
+      <span id="host">Host Name</span>
+    </div>
+    <div class="normal">
+      <span id="phoneno4">111-111-1111</span>
+    </div>
+  </div>
+
+  <!-- ecard6 -->
+  <div id="ecard6">
+  <div id="back">
+    <div id="groom">
+      Groom Name
+    </div>
+    <div id="and">
+      AND
+    </div>
+    <div id="bride">
+      bride Name
+    </div>
+    <div id="p1">
+      together with their parents request the honour of your presence at their marriage ceremony on Sunday, the twenty-first of October two thousand twenty-one at one o'clock in the afternoon
+    </div>
+  </div>
+</div>
+</div>
+
+    <div id="ecard">
+      <div class="list">
+      <p>E-Card Tools</p>
+    </div>
+    <div class="list">
+      <p id ="util">Utilities</p>
+    </div>
+
+    <!-- input ecard1 -->
+      <ul id = "input1">
+        <li class="save"><label>Your Name:</label>
+          <input type="text" placeholder="Name" id="box1"/>
+        </li>
+        <li class="save"><label>Job Title:</label>
+          <input type="text" placeholder="Job Title" id="box2"/>
+        </li>
+        <li class="save"><label>Phone Number1:</label>
+          <input type="tel" placeholder="+111 111 1111" id="box3" style="width: 140px"/>
+        </li>
+        <li class="save"><label>Phone Number2:</label>
+          <input type="tel" placeholder="+111 111 1111" id="box4" style="width: 140px"/>
+        </li>
+        <li class="save"><label>Email:</label>
+          <input type="email" placeholder="Cards@gmail.com" id="box5"/>
+        </li>
+        <li class="save"><label>Website URL:</label>
+          <input type="url" placeholder="www.google.com" id="box6"/>
+        </li>
+        <li class="save"><label>Address:</label>
+          <textarea id="box7"></textarea>
+        </li>
+      </ul>
+      <button class="buttonecard" id ="button1"onclick="ChangeMe1()">Confirm</button>
+      <button class="buttonecard" id ="save1"onclick="SaveMe1()">Set As Favourite</button>
+      <button class="buttonecard" id ="confirm1" onclick="submitMe()">Submit</button>
+
+      <!-- input ecard2 -->
+      <ul id = "input2">
+        <li class="save"><label>Your Name:</label>
+          <input type="text" placeholder="Name" id="box8"/>
+        </li>
+        <li class="save"><label>Job Title:</label>
+          <input type="text" placeholder="Job Title" id="box9"/>
+        </li>
+        <li class="save"><label>Phone Number:</label>
+          <input type="tel" placeholder="+111 111 1111" id="box10" style="width: 140px"/>
+        </li>
+        <li class="save"><label>Email:</label>
+          <input type="email" placeholder="Cards@gmail.com" id="box11"/>
+        </li>
+        <li class="save"><label>Website URL:</label>
+          <input type="url" placeholder="www.google.com" id="box12"/>
+        </li>
+        <li class="save"><label>Address:</label>
+          <textarea id="box13"></textarea>
+        </li>
+      </ul>
+      <button class="buttonecard" id ="button2"onclick="ChangeMe2()">Confirm</button>
+      <button class="buttonecard" id ="save2"onclick="SaveMe2()">Set As Favourite</button>
+      <button class="buttonecard" id ="confirm2"onclick="submitMe()">Submit</button>
+
+      <!-- input ecard3 -->
+      <ul id = "input3">
+        <li class="save"><label>Receiver:</label>
+          <input type="text" placeholder="Receiver Name" id="box14"/>
+        </li>
+        <li class="save"><label>Description</label>
+          <textarea id="box15"></textarea>
+        </li>
+        <li class="save"><label>Sender</label>
+          <input type="text" placeholder="Sender Name" id="box16"/>
+        </li>
+      </ul>
+      <button class="buttonecard" id ="button3"onclick="ChangeMe3()">Confirm</button>
+      <button class="buttonecard" id ="save3"onclick="SaveMe3()">Set As Favourite</button>
+      <button class="buttonecard" id="load3" onclick"favList()">Load Favourite Changes?</button>
+      <button class="buttonecard" id ="confirm3" onclick="submitMe()">Submit</button>
+
+      <!-- input ecard4 -->
+      <ul id = "input4">
+        <li class="save"><label>Receiver:</label>
+          <input type="text" placeholder="Receiver Name" id="box17"/>
+        </li>
+        <li class="save"><label>Description</label>
+          <textarea id="box18"></textarea>
+        </li>
+        <li class="save"><label>Sender</label>
+          <input type="text" placeholder="Sender Name" id="box19"/>
+        </li>
+      </ul>
+      <button class="buttonecard" id ="button4"onclick="ChangeMe4()">Confirm</button>
+      <button class="buttonecard" id ="save4"onclick="SaveMe4()">Set As Favourite</button>
+      <button class="buttonecard" id ="confirm4" onclick="submitMe()">Submit</button>
+
+      <!-- input ecard5 -->
+      <ul id = "input5">
+        <li class="save"><label>Event Name:</label>
+          <input type="text" placeholder="Event Name" id="box20"/>
+        </li>
+        <li class="save"><label>Host Name:</label>
+          <input type="text" placeholder="Host Name" id="box21"/>
+        </li>
+        <li class="save"><label>Date:</label>
+          <input type="date" id="box22"/>
+        </li>
+        <li class="save"><label>Time Start:</label>
+          <input type="time"id="box23"/>
+        </li>
+        <li class="save"><label>Time End:</label>
+          <input type="time"id="box24"/>
+        </li>
+        <li class="save"><label>Location:</label>
+          <input type="text" placeholder="Cresant Hotel" id="box25"/>
+        </li>
+        <li class="save"><label>Address:</label>
+          <textarea id="box26"></textarea>
+        </li>
+        <li class="save"><label>Country</label>
+          <input type="text" placeholder="Dallas, Texas" id="box27"/>
+        </li>
+        <li class="save"><label>Phone No.</label>
+          <input type="tel" placeholder="+111 111 1111" id="box28"/>
+        </li>
+      </ul>
+      <button class="buttonecard" id ="button5"onclick="ChangeMe5()">Confirm</button>
+      <button class="buttonecard" id ="save5"onclick="SaveMe5()">Set As Favourite</button>
+      <button class="buttonecard" id ="confirm5" onclick="submitMe()">Submit</button>
+
+      <!-- input ecard6 -->
+      <ul id = "input6">
+        <li class="save"><label>Groom Name:</label>
+          <input type="text" placeholder="Groom Name" id="box29"/>
+        </li>
+        <li class="save"><label>Bride Name:</label>
+          <input type="text" placeholder="Bride Name" id="box30"/>
+        </li>
+        <li class="save"><label>Description of event</label>
+          <textarea id="box31"></textarea>
+        </li>
+      </ul>
+      <button class="buttonecard" id ="button6"onclick="ChangeMe6()">Confirm</button>
+      <button class="buttonecard" id ="save6"onclick="SaveMe6()">Set As Favourite</button>
+      <button class="buttonecard" id ="confirm6" onclick="submitMe()">Submit</button>
+    </div>
+
+    <footer class="footer">
+        <p class="copyright"> © Copyright 2021 </p>
+    </footer>
+  </body>
+</html>
